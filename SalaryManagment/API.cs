@@ -43,6 +43,16 @@ namespace SalaryManagment
         public static int monthTwelve = 1412;
         public static string currentVersion = "V1.0";
         public static bool lastVersion = true;
+        public static string firstName;
+        public static string secondName;
+        public static string thirdName ;
+        public static string egn;
+        public static string phoneNum;
+        public static string jobPosition;
+        public static string monthlySalar;
+        public static string pin;
+        public static string employeeNum;
+        public static string companyName;
         public static void SetMonth(int CurrentMonth)
         {
             if (CurrentMonth == 1)
