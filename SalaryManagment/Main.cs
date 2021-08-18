@@ -38,7 +38,7 @@ namespace SalaryManagment
 
         private void Main_Load(object sender, EventArgs e)
         {
-            CompanyDB.ExampleConnection();
+            CompanyDB.DefaultConnection();
         }
         private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {

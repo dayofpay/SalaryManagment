@@ -233,6 +233,7 @@
             this.nextButton.TabIndex = 11;
             this.nextButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.nextButton.Visible = false;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
             // StepTwo
             // 

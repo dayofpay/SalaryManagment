@@ -41,6 +41,7 @@ namespace SalaryManagment
                     Properties.Settings.Default.port = guna2TextBox2.Text;
                     Properties.Settings.Default.password = guna2TextBox3.Text;
                     Properties.Settings.Default.username = guna2TextBox4.Text;
+                    Properties.Settings.Default.database = dbBox.Text;
                     Properties.Settings.Default.Save();
                     StepTwo stepTwo = new StepTwo();
                     this.Hide();
@@ -57,8 +58,20 @@ namespace SalaryManagment
             {
                 statusLabel.Visible = true;
                 statusLabel.Text = "Грешка !";
-                MessageBox.Show(error.ToString());
+                if (error.Message == "Unable to connect to any of the specified MySQL hosts.")
+                {
+                    MessageBox.Show("Някой от Въведените данни за MySQL Връзката бяха грешни, моля опитайте отново !", "SalaryManagment | Ако се нуждаете от помощ, не се колебайте, свържете се с нас !");
+                }
+                else
+                {
+                    MessageBox.Show("Беше открита грешка със свързването към MySQL Сървъра : Отговор от сървъра : " + error.Message);
+                }
             }
+        }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

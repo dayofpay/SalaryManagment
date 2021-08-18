@@ -27,6 +27,7 @@ namespace SalaryManagment
         private string conString;
         public StartUP()
         {
+
             InitializeComponent();
             server = "localhost";
             database = "salarymanagment";
@@ -41,16 +42,8 @@ namespace SalaryManagment
 
         private void StartUP_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(Properties.Settings.Default.username);
-            //   WebRequest request1 = WebRequest.Create("https://raw.githubusercontent.com/dayofpay/salarymanager/main/latestversion.txt");
-            //    WebResponse response = request1.GetResponse();
-            //   Stream dataStream = response.GetResponseStream();
-            //  StreamReader reader = new StreamReader(dataStream);
-            //  string responseFromServer = reader.ReadToEnd();
-            //  if (API.currentVersion.ToString() == responseFromServer)
-            //   {
-            //   versionCheck.Text = "Вие изполвате последната версия на софтуера (" + API.currentVersion.ToString() + ")";
-            //    }
+            versionLabel.Text = "Версия V." + Properties.Settings.Default.currentVersion;
+            companyName.Text = Properties.Settings.Default.companyName;
         }
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
@@ -71,6 +64,10 @@ namespace SalaryManagment
             this.Hide();
             register.ShowDialog();
             // MessageBox.Show("Този бутон е деактивиран по подразбиране, свържете се с работодателя си за повече информация", "Employee Manager " + API.currentVersion);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
         }
     }
 }

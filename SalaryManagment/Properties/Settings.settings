@@ -3,21 +3,36 @@
   <Profiles />
   <Settings>
     <Setting Name="server" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">localhost</Value>
     </Setting>
     <Setting Name="database" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">salarymanagment</Value>
     </Setting>
     <Setting Name="username" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">root</Value>
     </Setting>
     <Setting Name="password" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="port" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">3306</Value>
     </Setting>
     <Setting Name="ssl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">none</Value>
+    </Setting>
+    <Setting Name="logo" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="companyName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SALARY MANAGMENT</Value>
+    </Setting>
+    <Setting Name="currentVersion" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1.1</Value>
+    </Setting>
+    <Setting Name="rememberCompany" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="rememberEmployeeId" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

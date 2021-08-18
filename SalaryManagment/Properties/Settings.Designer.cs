@@ -25,7 +25,7 @@ namespace SalaryManagment.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("localhost")]
         public string server {
             get {
                 return ((string)(this["server"]));
@@ -37,7 +37,7 @@ namespace SalaryManagment.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("salarymanagment")]
         public string database {
             get {
                 return ((string)(this["database"]));
@@ -49,7 +49,7 @@ namespace SalaryManagment.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("root")]
         public string username {
             get {
                 return ((string)(this["username"]));
@@ -73,7 +73,7 @@ namespace SalaryManagment.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("3306")]
         public string port {
             get {
                 return ((string)(this["port"]));
@@ -85,13 +85,73 @@ namespace SalaryManagment.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("none")]
         public string ssl {
             get {
                 return ((string)(this["ssl"]));
             }
             set {
                 this["ssl"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string logo {
+            get {
+                return ((string)(this["logo"]));
+            }
+            set {
+                this["logo"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("SALARY MANAGMENT")]
+        public string companyName {
+            get {
+                return ((string)(this["companyName"]));
+            }
+            set {
+                this["companyName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1.1")]
+        public string currentVersion {
+            get {
+                return ((string)(this["currentVersion"]));
+            }
+            set {
+                this["currentVersion"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string rememberCompany {
+            get {
+                return ((string)(this["rememberCompany"]));
+            }
+            set {
+                this["rememberCompany"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string rememberEmployeeId {
+            get {
+                return ((string)(this["rememberEmployeeId"]));
+            }
+            set {
+                this["rememberEmployeeId"] = value;
             }
         }
     }

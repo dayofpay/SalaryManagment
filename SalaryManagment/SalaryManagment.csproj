@@ -211,8 +211,15 @@
   <ItemGroup>
     <Compile Include="API.cs" />
     <Compile Include="CompanyDB.cs" />
+    <Compile Include="CompanyDetails.cs" />
     <Compile Include="EventHandler.cs" />
     <Compile Include="ExampleAlgorithm.cs" />
+    <Compile Include="LicenseCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LicenseCheck.Designer.cs">
+      <DependentUpon>LicenseCheck.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,12 +246,21 @@
     <Compile Include="StartUP.Designer.cs">
       <DependentUpon>StartUP.cs</DependentUpon>
     </Compile>
+    <Compile Include="StepThree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StepThree.Designer.cs">
+      <DependentUpon>StepThree.cs</DependentUpon>
+    </Compile>
     <Compile Include="StepTwo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StepTwo.Designer.cs">
       <DependentUpon>StepTwo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="LicenseCheck.resx">
+      <DependentUpon>LicenseCheck.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StartUP.resx">
       <DependentUpon>StartUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StepThree.resx">
+      <DependentUpon>StepThree.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StepTwo.resx">
       <DependentUpon>StepTwo.cs</DependentUpon>

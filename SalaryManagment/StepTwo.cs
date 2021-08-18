@@ -24,6 +24,16 @@ namespace SalaryManagment
         private static string eightState = "ПИН КОД:";
         private static string ninethhState = "Номер на служител:";
         private static string tenthstate = "Име на компания: ";
+        public static string firstName;
+        public static string secondName;
+        public static string thirdName;
+        public static string egn;
+        public static string phoneNum;
+        public static string jobPosition;
+        public static string monthlySalar;
+        public static string pin;
+        public static string employeeNum;
+        public static string companyName;
         public StepTwo()
         {
             InitializeComponent();
@@ -32,6 +42,7 @@ namespace SalaryManagment
 
         private void StepTwo_Load(object sender, EventArgs e)
         {
+            MessageBox.Show("[⚠] ВАЖНО СЪОБЩЕНИЕ !! \r\n ПЪЛНОТО РЕДАКТИРАНЕ НА ПЕРСОНАЛА СЕ НАСТРОЙВА СЛЕД КАТО ПРИКЛЮЧИТЕ С КОНФИГУРАЦИЯТА НА СОФУТЕРА !! ", "[⚠] SalaryManagment WARNING");
             mainLabel.Text = firstState;
             CompanyDB.Connect();
         }
@@ -57,7 +68,7 @@ namespace SalaryManagment
                     if (currentState == 0)
                     {
                         mainLabel.Text = firstState;
-                        API.firstName = sourceBox.Text;
+                        firstName = sourceBox.Text;
                         sourceBox.Clear();
                         EventHandler.OnSuccess(1);
 statusLabel.Text = "Успешно !";
@@ -65,7 +76,7 @@ statusLabel.Text = "Успешно !";
                     if (currentState == 1)
                     {
                         mainLabel.Text = secondState;
-                        API.secondName = sourceBox.Text;
+                        secondName = sourceBox.Text;
                         sourceBox.Clear();
                         EventHandler.OnSuccess(2);
 statusLabel.Text = "Успешно !";
@@ -73,7 +84,7 @@ statusLabel.Text = "Успешно !";
                     if (currentState == 2)
                     {
                         mainLabel.Text = thirdState;
-                        API.thirdName = sourceBox.Text;
+                        thirdName = sourceBox.Text;
                         sourceBox.Clear();
                         EventHandler.OnSuccess(3);
 statusLabel.Text = "Успешно !";
@@ -81,7 +92,7 @@ statusLabel.Text = "Успешно !";
                     if (currentState == 3)
                     {
                         mainLabel.Text = fourthState;
-                        API.egn = sourceBox.Text;
+                        egn = sourceBox.Text;
                         sourceBox.Clear();
                         EventHandler.OnSuccess(4);
 statusLabel.Text = "Успешно !";
@@ -89,7 +100,7 @@ statusLabel.Text = "Успешно !";
                     if (currentState == 4)
                     {
                         mainLabel.Text = fifthState;
-                        API.phoneNum = sourceBox.Text;
+                        phoneNum = sourceBox.Text;
                         sourceBox.Clear();
                         EventHandler.OnSuccess(5);
 statusLabel.Text = "Успешно !";
@@ -97,7 +108,7 @@ statusLabel.Text = "Успешно !";
                     if (currentState == 5)
                     {
                         mainLabel.Text = sithxState;
-                        API.jobPosition = sourceBox.Text;
+                        jobPosition = sourceBox.Text;
                         sourceBox.Clear();
                         EventHandler.OnSuccess(6);
 statusLabel.Text = "Успешно !";
@@ -105,7 +116,7 @@ statusLabel.Text = "Успешно !";
                     if (currentState == 6)
                     {
                         mainLabel.Text = seventhState;
-                        API.monthlySalar = sourceBox.Text;
+                        monthlySalar = sourceBox.Text;
                         sourceBox.Clear();
                         EventHandler.OnSuccess(7);
 statusLabel.Text = "Успешно !";
@@ -113,7 +124,7 @@ statusLabel.Text = "Успешно !";
                     if (currentState == 7)
                     {
                         mainLabel.Text = eightState;
-                        API.pin = sourceBox.Text;
+                        pin = sourceBox.Text;
                         sourceBox.Clear();
                         EventHandler.OnSuccess(8);
 statusLabel.Text = "Успешно !";
@@ -121,7 +132,7 @@ statusLabel.Text = "Успешно !";
                     if (currentState == 8)
                     {
                         mainLabel.Text = ninethhState;
-                        API.employeeNum = sourceBox.Text;
+                        employeeNum = sourceBox.Text;
                         sourceBox.Clear();
                         EventHandler.OnSuccess(9);
 statusLabel.Text = "Успешно !";
@@ -129,9 +140,10 @@ statusLabel.Text = "Успешно !";
                     if (currentState == 9)
                     {
                         mainLabel.Text = tenthstate;
-                        API.companyName = sourceBox.Text;
+                        companyName = sourceBox.Text;
                         sourceBox.Clear();
                         EventHandler.OnSuccess(10);
+                        EventHandler.stepsCompleted = true;
 statusLabel.Text = "Успешно !";
                     }
                 }
@@ -145,6 +157,24 @@ statusLabel.Text = "Успешно !";
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            if (EventHandler.stepsCompleted == true)
+            {
+                try
+                {
+                    CompanyDB.Connect();
+                    StepThree stepThree = new StepThree();
+                    this.Hide();
+                    stepThree.ShowDialog();
+                }
+                catch(MySql.Data.MySqlClient.MySqlException Error)
+                {
+                    MessageBox.Show("Изглежда, че имате грешка в конфигуририрането на MySQL Връзката : ", Error.Message);
+                }
+            }
         }
     }
 }

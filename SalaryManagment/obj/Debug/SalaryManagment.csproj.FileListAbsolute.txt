@@ -206,3 +206,5 @@ C:\Users\dayofpay\source\repos\SalaryManagment\SalaryManagment\bin\Debug\Bunifu.
 C:\Users\dayofpay\source\repos\SalaryManagment\SalaryManagment\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.xml
 C:\Users\dayofpay\source\repos\SalaryManagment\SalaryManagment\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.xml
 C:\Users\dayofpay\source\repos\SalaryManagment\SalaryManagment\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xml
+C:\Users\dayofpay\source\repos\SalaryManagment\SalaryManagment\obj\Debug\SalaryManagment.StepThree.resources
+C:\Users\dayofpay\source\repos\SalaryManagment\SalaryManagment\obj\Debug\SalaryManagment.LicenseCheck.resources

@@ -26,29 +26,30 @@ namespace SalaryManagment
         public static string conString { get; set; }
         public static void Connect()
         {
-            server = "localhost";
-            database = "salarymanagment";
-            user = "root";
-            password = "";
-            port = "3306";
-            sslM = "none";
+            server = Properties.Settings.Default.server;
+            database = Properties.Settings.Default.database;
+            user = Properties.Settings.Default.username;
+            password = Properties.Settings.Default.password;
+            port = Properties.Settings.Default.port;
+            sslM = Properties.Settings.Default.ssl;
             connectionString = String.Format("server={0};port={1};user id={2}; password={3}; database={4}; SslMode={5}", server, port, user, password, database, sslM);
             conString = connectionString;
             connection = new MySqlConnection(conString);
             connection.Open();
         }
-        public static void ExampleConnection()
+        public static void DefaultConnection()
         {
-            var readServer = Properties.Settings.Default.server;
-            var readDB = Properties.Settings.Default.database;
-            var readUser = Properties.Settings.Default.username;
-            var readPassowrd = Properties.Settings.Default.password;
-            var readPort = Properties.Settings.Default.port;
-            var readSSL = Properties.Settings.Default.ssl;
+            server = Properties.Settings.Default.server;
+            database = Properties.Settings.Default.database;
+            user = Properties.Settings.Default.username;
+            password = Properties.Settings.Default.password;
+            port = Properties.Settings.Default.port;
+            sslM = Properties.Settings.Default.ssl;
             Properties.Settings.Default.Save();
-            var exampleConnectionString = String.Format("server={0};port={1};user id={2}; password={3}; database={4}; SslMode={5}", readServer,readPort,readUser,readPassowrd,readDB,readSSL);
-            var connectMe = new MySqlConnection(exampleConnectionString);
-            connectMe.Open();
+            connectionString = String.Format("server={0};port={1};user id={2}; password={3}; database={4}; SslMode={5}", server, port, user, password, database, sslM);
+            conString = connectionString;
+            connection = new MySqlConnection(conString);
+            connection.Open();
         }
     }
 }

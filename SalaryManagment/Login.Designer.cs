@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState22 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState23 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState24 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState19 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState20 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState21 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -44,8 +51,15 @@
             this.backButton = new Guna.UI2.WinForms.Guna2Button();
             this.firmText = new Guna.UI2.WinForms.Guna2TextBox();
             this.firmLabel = new System.Windows.Forms.Label();
+            this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.rememberCompany = new Bunifu.UI.WinForms.BunifuToggleSwitch();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.rememberEmployee = new Bunifu.UI.WinForms.BunifuToggleSwitch();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -66,6 +80,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(124)))));
+            this.guna2Panel1.Controls.Add(this.bunifuPictureBox1);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
@@ -165,6 +180,7 @@
             this.numberTextBox.ShadowDecoration.Parent = this.numberTextBox;
             this.numberTextBox.Size = new System.Drawing.Size(200, 36);
             this.numberTextBox.TabIndex = 7;
+            this.numberTextBox.TextChanged += new System.EventHandler(this.numberTextBox_TextChanged);
             // 
             // loginButton
             // 
@@ -257,7 +273,7 @@
             this.firmText.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.firmText.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.firmText.HoverState.Parent = this.firmText;
-            this.firmText.Location = new System.Drawing.Point(424, 133);
+            this.firmText.Location = new System.Drawing.Point(448, 133);
             this.firmText.Name = "firmText";
             this.firmText.PasswordChar = '\0';
             this.firmText.PlaceholderText = "";
@@ -265,6 +281,7 @@
             this.firmText.ShadowDecoration.Parent = this.firmText;
             this.firmText.Size = new System.Drawing.Size(200, 36);
             this.firmText.TabIndex = 14;
+            this.firmText.TextChanged += new System.EventHandler(this.firmText_TextChanged);
             // 
             // firmLabel
             // 
@@ -273,9 +290,131 @@
             this.firmLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.firmLabel.Location = new System.Drawing.Point(123, 133);
             this.firmLabel.Name = "firmLabel";
-            this.firmLabel.Size = new System.Drawing.Size(296, 48);
+            this.firmLabel.Size = new System.Drawing.Size(333, 48);
             this.firmLabel.TabIndex = 13;
-            this.firmLabel.Text = "№ На фирмата:";
+            this.firmLabel.Text = "Име на фирмата: ";
+            // 
+            // bunifuPictureBox1
+            // 
+            this.bunifuPictureBox1.AllowFocused = false;
+            this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPictureBox1.AutoSizeHeight = true;
+            this.bunifuPictureBox1.BorderRadius = 50;
+            this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
+            this.bunifuPictureBox1.IsCircle = true;
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(-2, 0);
+            this.bunifuPictureBox1.Name = "bunifuPictureBox1";
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuPictureBox1.TabIndex = 15;
+            this.bunifuPictureBox1.TabStop = false;
+            this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
+            // rememberCompany
+            // 
+            this.rememberCompany.Animation = 5;
+            this.rememberCompany.BackColor = System.Drawing.Color.Transparent;
+            this.rememberCompany.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rememberCompany.BackgroundImage")));
+            this.rememberCompany.Checked = false;
+            this.rememberCompany.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rememberCompany.InnerCirclePadding = 3;
+            this.rememberCompany.Location = new System.Drawing.Point(616, 175);
+            this.rememberCompany.Name = "rememberCompany";
+            this.rememberCompany.Size = new System.Drawing.Size(32, 18);
+            this.rememberCompany.TabIndex = 15;
+            this.rememberCompany.ThumbMargin = 3;
+            toggleState22.BackColor = System.Drawing.Color.DarkGray;
+            toggleState22.BackColorInner = System.Drawing.Color.White;
+            toggleState22.BorderColor = System.Drawing.Color.DarkGray;
+            toggleState22.BorderColorInner = System.Drawing.Color.White;
+            toggleState22.BorderRadius = 17;
+            toggleState22.BorderRadiusInner = 11;
+            toggleState22.BorderThickness = 1;
+            toggleState22.BorderThicknessInner = 1;
+            this.rememberCompany.ToggleStateDisabled = toggleState22;
+            toggleState23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            toggleState23.BackColorInner = System.Drawing.Color.White;
+            toggleState23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            toggleState23.BorderColorInner = System.Drawing.Color.White;
+            toggleState23.BorderRadius = 17;
+            toggleState23.BorderRadiusInner = 11;
+            toggleState23.BorderThickness = 1;
+            toggleState23.BorderThicknessInner = 1;
+            this.rememberCompany.ToggleStateOff = toggleState23;
+            toggleState24.BackColor = System.Drawing.Color.DodgerBlue;
+            toggleState24.BackColorInner = System.Drawing.Color.White;
+            toggleState24.BorderColor = System.Drawing.Color.DodgerBlue;
+            toggleState24.BorderColorInner = System.Drawing.Color.White;
+            toggleState24.BorderRadius = 17;
+            toggleState24.BorderRadiusInner = 11;
+            toggleState24.BorderThickness = 1;
+            toggleState24.BorderThicknessInner = 1;
+            this.rememberCompany.ToggleStateOn = toggleState24;
+            this.rememberCompany.Value = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Himalaya", 16F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Lime;
+            this.label1.Location = new System.Drawing.Point(495, 175);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 22);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Запомни ме :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Himalaya", 16F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.Lime;
+            this.label2.Location = new System.Drawing.Point(495, 248);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(121, 22);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Запомни ме :";
+            // 
+            // rememberEmployee
+            // 
+            this.rememberEmployee.Animation = 5;
+            this.rememberEmployee.BackColor = System.Drawing.Color.Transparent;
+            this.rememberEmployee.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rememberEmployee.BackgroundImage")));
+            this.rememberEmployee.Checked = false;
+            this.rememberEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rememberEmployee.InnerCirclePadding = 3;
+            this.rememberEmployee.Location = new System.Drawing.Point(616, 248);
+            this.rememberEmployee.Name = "rememberEmployee";
+            this.rememberEmployee.Size = new System.Drawing.Size(32, 18);
+            this.rememberEmployee.TabIndex = 17;
+            this.rememberEmployee.ThumbMargin = 3;
+            toggleState19.BackColor = System.Drawing.Color.DarkGray;
+            toggleState19.BackColorInner = System.Drawing.Color.White;
+            toggleState19.BorderColor = System.Drawing.Color.DarkGray;
+            toggleState19.BorderColorInner = System.Drawing.Color.White;
+            toggleState19.BorderRadius = 17;
+            toggleState19.BorderRadiusInner = 11;
+            toggleState19.BorderThickness = 1;
+            toggleState19.BorderThicknessInner = 1;
+            this.rememberEmployee.ToggleStateDisabled = toggleState19;
+            toggleState20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            toggleState20.BackColorInner = System.Drawing.Color.White;
+            toggleState20.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            toggleState20.BorderColorInner = System.Drawing.Color.White;
+            toggleState20.BorderRadius = 17;
+            toggleState20.BorderRadiusInner = 11;
+            toggleState20.BorderThickness = 1;
+            toggleState20.BorderThicknessInner = 1;
+            this.rememberEmployee.ToggleStateOff = toggleState20;
+            toggleState21.BackColor = System.Drawing.Color.DodgerBlue;
+            toggleState21.BackColorInner = System.Drawing.Color.White;
+            toggleState21.BorderColor = System.Drawing.Color.DodgerBlue;
+            toggleState21.BorderColorInner = System.Drawing.Color.White;
+            toggleState21.BorderRadius = 17;
+            toggleState21.BorderRadiusInner = 11;
+            toggleState21.BorderThickness = 1;
+            toggleState21.BorderThicknessInner = 1;
+            this.rememberEmployee.ToggleStateOn = toggleState21;
+            this.rememberEmployee.Value = false;
             // 
             // Login
             // 
@@ -283,6 +422,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.rememberEmployee);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.rememberCompany);
             this.Controls.Add(this.firmText);
             this.Controls.Add(this.firmLabel);
             this.Controls.Add(this.backButton);
@@ -301,7 +444,9 @@
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,5 +469,10 @@
         private Guna.UI2.WinForms.Guna2Button continueButton;
         private Guna.UI2.WinForms.Guna2TextBox firmText;
         private System.Windows.Forms.Label firmLabel;
+        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
+        private System.Windows.Forms.Label label2;
+        private Bunifu.UI.WinForms.BunifuToggleSwitch rememberEmployee;
+        private System.Windows.Forms.Label label1;
+        private Bunifu.UI.WinForms.BunifuToggleSwitch rememberCompany;
     }
 }

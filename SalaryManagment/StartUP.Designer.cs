@@ -39,13 +39,11 @@
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.companyName = new Bunifu.UI.WinForms.BunifuLabel();
+            this.versionLabel = new Bunifu.UI.WinForms.BunifuLabel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +58,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.guna2Panel1.Controls.Add(this.pictureBox2);
+            this.guna2Panel1.Controls.Add(this.versionLabel);
             this.guna2Panel1.Controls.Add(this.pictureBox4);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -152,26 +150,38 @@
             this.panel2.Size = new System.Drawing.Size(82, 404);
             this.panel2.TabIndex = 0;
             // 
-            // pictureBox1
+            // companyName
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::SalaryManagment.Properties.Resources.cooltext390339902308219_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(234, -25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(481, 180);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.companyName.AllowParentOverrides = false;
+            this.companyName.AutoEllipsis = false;
+            this.companyName.Cursor = System.Windows.Forms.Cursors.Default;
+            this.companyName.CursorType = System.Windows.Forms.Cursors.Default;
+            this.companyName.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.companyName.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.companyName.Location = new System.Drawing.Point(291, 12);
+            this.companyName.Name = "companyName";
+            this.companyName.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.companyName.Size = new System.Drawing.Size(280, 45);
+            this.companyName.TabIndex = 16;
+            this.companyName.Text = "${companyName}";
+            this.companyName.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.companyName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // pictureBox2
+            // versionLabel
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(6, 411);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(136, 45);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
+            this.versionLabel.AllowParentOverrides = false;
+            this.versionLabel.AutoEllipsis = false;
+            this.versionLabel.CursorType = null;
+            this.versionLabel.Font = new System.Drawing.Font("Segoe UI Black", 11F, System.Drawing.FontStyle.Bold);
+            this.versionLabel.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.versionLabel.Location = new System.Drawing.Point(12, 418);
+            this.versionLabel.Name = "versionLabel";
+            this.versionLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.versionLabel.Size = new System.Drawing.Size(118, 20);
+            this.versionLabel.TabIndex = 19;
+            this.versionLabel.Text = "${versionCheck}";
+            this.versionLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.versionLabel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // pictureBox4
             // 
@@ -189,21 +199,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.companyName);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StartUP";
             this.Text = "StartUP";
             this.Load += new System.EventHandler(this.StartUP_Load);
             this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -214,9 +223,7 @@
 
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
@@ -224,5 +231,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
+        private Bunifu.UI.WinForms.BunifuLabel companyName;
+        private Bunifu.UI.WinForms.BunifuLabel versionLabel;
     }
 }

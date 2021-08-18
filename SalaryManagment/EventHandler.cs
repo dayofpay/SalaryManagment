@@ -9,13 +9,14 @@ namespace SalaryManagment
     class EventHandler
     {
         public static int GetParameterID;
+        public static bool stepsCompleted = false;
+        public static bool stepsCompanyCompleted = false;
         public static void OnSuccess(int stepInfo)
         {
             GetParameterID = stepInfo;
         }
         public static void EventOnLoad()
         {
-
         }
     }
 }
