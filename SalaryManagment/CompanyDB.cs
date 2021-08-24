@@ -32,6 +32,7 @@ namespace SalaryManagment
             password = Properties.Settings.Default.password;
             port = Properties.Settings.Default.port;
             sslM = Properties.Settings.Default.ssl;
+            Properties.Settings.Default.Save();
             connectionString = String.Format("server={0};port={1};user id={2}; password={3}; database={4}; SslMode={5}", server, port, user, password, database, sslM);
             conString = connectionString;
             connection = new MySqlConnection(conString);

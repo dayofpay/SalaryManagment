@@ -52,6 +52,7 @@ namespace SalaryManagment
         public static string monthlySalar;
         public static string pin;
         public static string employeeNum;
+        public static string finalstateCompanyName;
         public static string companyName;
         public static void SetMonth(int CurrentMonth)
         {

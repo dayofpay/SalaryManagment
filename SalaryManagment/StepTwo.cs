@@ -12,6 +12,8 @@ namespace SalaryManagment
 {
     public partial class StepTwo : Form
     {
+        public static bool checkHandler = false;
+
         private static int currentState = 0;
         private static string DefaultLog = firstState;
         private static string firstState = "Име: ";
@@ -24,6 +26,7 @@ namespace SalaryManagment
         private static string eightState = "ПИН КОД:";
         private static string ninethhState = "Номер на служител:";
         private static string tenthstate = "Име на компания: ";
+        private static string elevenstate = "Собствени/к/ци";
         public static string firstName;
         public static string secondName;
         public static string thirdName;
@@ -34,6 +37,7 @@ namespace SalaryManagment
         public static string pin;
         public static string employeeNum;
         public static string companyName;
+        public static bool warned;
         public StepTwo()
         {
             InitializeComponent();
@@ -43,7 +47,16 @@ namespace SalaryManagment
         private void StepTwo_Load(object sender, EventArgs e)
         {
             MessageBox.Show("[⚠] ВАЖНО СЪОБЩЕНИЕ !! \r\n ПЪЛНОТО РЕДАКТИРАНЕ НА ПЕРСОНАЛА СЕ НАСТРОЙВА СЛЕД КАТО ПРИКЛЮЧИТЕ С КОНФИГУРАЦИЯТА НА СОФУТЕРА !! ", "[⚠] SalaryManagment WARNING");
-            mainLabel.Text = firstState;
+            firstLabel.Text = firstState;
+            secondLabel.Text = secondState;
+            thirdLabel.Text = thirdState;
+            fourthLabel.Text = fourthState;
+            fifthLabel.Text = fifthState;
+            sixthLabel.Text = sithxState;
+            seventhLabel.Text = seventhState;
+            eightLabel.Text = eightState;
+            ninethLabel.Text = ninethhState;
+            tenthLabel.Text = tenthstate;
             CompanyDB.Connect();
         }
 
@@ -53,104 +66,38 @@ namespace SalaryManagment
 
         private void continueButton_Click(object sender, EventArgs e)
         {
-            if (sourceBox.Text != "")
+            if (firstBox.Text != "" && secondbox.Text != "" && thirdBox.Text != "" && fourthBox.Text != "" && fifthBox.Text != "" &&sixthBox.Text !="" &&seventhBox.Text != "" &&eightBox.Text !="" && ninethBox.Text !="" && tenthBox.Text !="")
             {
-                if(currentState >= 9)
+                API.firstName = firstBox.Text;
+                API.secondName = secondbox.Text;
+                API.thirdName = thirdBox.Text;
+                API.egn = fourthBox.Text;
+                API.phoneNum = fifthBox.Text;
+                API.jobPosition = sixthBox.Text;
+                API.monthlySalar = seventhBox.Text;
+                API.pin = eightBox.Text;
+                API.employeeNum = ninethBox.Text;
+                API.companyName = tenthBox.Text;
+                EventHandler.stepsCompleted = true;
+            }
+            if (EventHandler.stepsCompleted == true)
+            {
+                try
                 {
-                    nextButton.Visible = true;
+                    CompanyDB.Connect();
+                    StepThree stepThree = new StepThree();
+                    this.Hide();
+                    stepThree.ShowDialog();
                 }
-                statusLabel.Visible = true;
-                for (int defaultNum = 0; defaultNum < 1; defaultNum++)
+                catch (MySql.Data.MySqlClient.MySqlException Error)
                 {
-                    currentState++;
-                }
-                {
-                    if (currentState == 0)
-                    {
-                        mainLabel.Text = firstState;
-                        firstName = sourceBox.Text;
-                        sourceBox.Clear();
-                        EventHandler.OnSuccess(1);
-statusLabel.Text = "Успешно !";
-                    }
-                    if (currentState == 1)
-                    {
-                        mainLabel.Text = secondState;
-                        secondName = sourceBox.Text;
-                        sourceBox.Clear();
-                        EventHandler.OnSuccess(2);
-statusLabel.Text = "Успешно !";
-                    }
-                    if (currentState == 2)
-                    {
-                        mainLabel.Text = thirdState;
-                        thirdName = sourceBox.Text;
-                        sourceBox.Clear();
-                        EventHandler.OnSuccess(3);
-statusLabel.Text = "Успешно !";
-                    }
-                    if (currentState == 3)
-                    {
-                        mainLabel.Text = fourthState;
-                        egn = sourceBox.Text;
-                        sourceBox.Clear();
-                        EventHandler.OnSuccess(4);
-statusLabel.Text = "Успешно !";
-                    }
-                    if (currentState == 4)
-                    {
-                        mainLabel.Text = fifthState;
-                        phoneNum = sourceBox.Text;
-                        sourceBox.Clear();
-                        EventHandler.OnSuccess(5);
-statusLabel.Text = "Успешно !";
-                    }
-                    if (currentState == 5)
-                    {
-                        mainLabel.Text = sithxState;
-                        jobPosition = sourceBox.Text;
-                        sourceBox.Clear();
-                        EventHandler.OnSuccess(6);
-statusLabel.Text = "Успешно !";
-                    }
-                    if (currentState == 6)
-                    {
-                        mainLabel.Text = seventhState;
-                        monthlySalar = sourceBox.Text;
-                        sourceBox.Clear();
-                        EventHandler.OnSuccess(7);
-statusLabel.Text = "Успешно !";
-                    }
-                    if (currentState == 7)
-                    {
-                        mainLabel.Text = eightState;
-                        pin = sourceBox.Text;
-                        sourceBox.Clear();
-                        EventHandler.OnSuccess(8);
-statusLabel.Text = "Успешно !";
-                    }
-                    if (currentState == 8)
-                    {
-                        mainLabel.Text = ninethhState;
-                        employeeNum = sourceBox.Text;
-                        sourceBox.Clear();
-                        EventHandler.OnSuccess(9);
-statusLabel.Text = "Успешно !";
-                    }
-                    if (currentState == 9)
-                    {
-                        mainLabel.Text = tenthstate;
-                        companyName = sourceBox.Text;
-                        sourceBox.Clear();
-                        EventHandler.OnSuccess(10);
-                        EventHandler.stepsCompleted = true;
-statusLabel.Text = "Успешно !";
-                    }
+                    MessageBox.Show("Изглежда, че имате грешка в конфигуририрането на MySQL Връзката : ", Error.Message);
                 }
             }
             else
             {
-                statusLabel.Text = "Грешка !";
+                EventHandler.stepsCompleted = false;
+                MessageBox.Show("Моля, попълнете всички полета !", "V-DEVS Softwares");
             }
         }
 
@@ -161,20 +108,16 @@ statusLabel.Text = "Успешно !";
 
         private void nextButton_Click(object sender, EventArgs e)
         {
-            if (EventHandler.stepsCompleted == true)
+        }
+
+        private void tenthBox_TextChanged(object sender, EventArgs e)
+        {
+            if(warned == false)
             {
-                try
-                {
-                    CompanyDB.Connect();
-                    StepThree stepThree = new StepThree();
-                    this.Hide();
-                    stepThree.ShowDialog();
-                }
-                catch(MySql.Data.MySqlClient.MySqlException Error)
-                {
-                    MessageBox.Show("Изглежда, че имате грешка в конфигуририрането на MySQL Връзката : ", Error.Message);
-                }
+                Messages.LegalCharacters();
+                warned = true;
             }
+            warned = true;
         }
     }
 }

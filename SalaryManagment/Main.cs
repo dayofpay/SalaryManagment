@@ -38,7 +38,8 @@ namespace SalaryManagment
 
         private void Main_Load(object sender, EventArgs e)
         {
-            CompanyDB.DefaultConnection();
+            companyStats.Text = "Отчет за фирма" + CompanyDetails.companyName + ": ";
+            CompanyDB.Connect();
         }
         private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {

@@ -21,6 +21,7 @@ namespace SalaryManagment
         private static string sithxState = "Правна форма:";
         private static string seventhState = "Капитал размер:";
         private static string eightState = "Регистрация по ЗДДС (ДА/НЕ):";
+        public static string ninethState = "Собственик/ци:";
         public static string companyName = "";
         public static string eik = "";
         public static string dateofRegister = "";
@@ -36,102 +37,46 @@ namespace SalaryManagment
 
         private void nextButton_Click(object sender, EventArgs e)
         {
+            if (firstBox.Text != "" && secondbox.Text != "" && thirdBox.Text != "" && fourthBox.Text != "" && fifthBox.Text != "" && sixthBox.Text != "" && seventhBox.Text != "" && eightBox.Text != "" && ninethBox.Text != "")
+            {
+                CompanyDetails.companyName = firstBox.Text;
+                CompanyDetails.eik = secondbox.Text;
+                CompanyDetails.dateofRegister = thirdBox.Text;
+                CompanyDetails.adress = fourthBox.Text;
+                CompanyDetails.baseActivity = fifthBox.Text;
+                CompanyDetails.form = sixthBox.Text;
+                CompanyDetails.capital = seventhBox.Text;
+                CompanyDetails.register = eightBox.Text;
+                CompanyDetails.owners = ninethBox.Text;
+                EventHandler.stepsCompanyCompleted = true;
+            }
             if (EventHandler.stepsCompanyCompleted == true)
             {
                 LicenseCheck licenseCheck = new LicenseCheck();
                 licenseCheck.ShowDialog();
             }
+            else
+            {
+                EventHandler.stepsCompleted = false;
+                MessageBox.Show("Моля, попълнете всички полета !", "V-DEVS Softwares");
+            }
         }
 
         private void continueButton_Click(object sender, EventArgs e)
         {
-            label1.Text = companyName;
-            MessageBox.Show(currentState.ToString());
-            if (sourceBox.Text != "")
-            {
-                if (currentState >= 7)
-                {
-                    nextButton.Visible = true;
-                    EventHandler.stepsCompanyCompleted = true;
-                }
-                statusLabel.Visible = true;
-                for (int defaultnum = 1; defaultnum < 1; defaultnum++)
-                {
-                    currentState++;
-                }
-                {
-                    if (currentState == 2)
-                    {
-                        mainLabel.Text = firstState;
-                        companyName = sourceBox.Text;
-                        sourceBox.Clear();
-                        EventHandler.OnSuccess(1);
-                        statusLabel.Text = "Успешно !";
-                    }
-                    if (currentState == 3)
-                    {
-                        mainLabel.Text = secondState;
-                        eik = sourceBox.Text;
-                        companyName = sourceBox.Text;
-                        sourceBox.Clear();
-                        EventHandler.OnSuccess(2);
-                        statusLabel.Text = "Успешно !";
-                    }
-                    if (currentState == 4)
-                    {
-                        mainLabel.Text = thirdState;
-                        dateofRegister = sourceBox.Text;
-                        sourceBox.Clear();
-                        EventHandler.OnSuccess(3);
-                        statusLabel.Text = "Успешно !";
-                    }
-                    if (currentState == 5)
-                    {
-                        mainLabel.Text = fourthState;
-                        adress = sourceBox.Text;
-                        sourceBox.Clear();
-                        EventHandler.OnSuccess(4);
-                        statusLabel.Text = "Успешно !";
-                    }
-                    if (currentState == 6)
-                    {
-                        mainLabel.Text = fifthState;
-                        baseActivity = sourceBox.Text;
-                        sourceBox.Clear();
-                        EventHandler.OnSuccess(5);
-                        statusLabel.Text = "Успешно !";
-                    }
-                    if (currentState == 7)
-                    {
-                        mainLabel.Text = sithxState;
-                        form = sourceBox.Text;
-                        sourceBox.Clear();
-                        EventHandler.OnSuccess(6);
-                        statusLabel.Text = "Успешно !";
-                    }
-                    if (currentState == 8)
-                    {
-                        mainLabel.Text = seventhState;
-                        capital = sourceBox.Text;
-                        sourceBox.Clear();
-                        EventHandler.OnSuccess(7);
-                        statusLabel.Text = "Успешно !";
-                    }
-                    if (currentState == 9)
-                    {
-                        mainLabel.Text = eightState;
-                        register = sourceBox.Text;
-                        sourceBox.Clear();
-                        EventHandler.OnSuccess(8);
-                        statusLabel.Text = "Успешно !";
-                    }
-                }
-            }
         }
 
         private void StepThree_Load(object sender, EventArgs e)
         {
-            mainLabel.Text = firstState;
+            firstLabel.Text = firstState;
+            secondLabel.Text = secondState;
+            thirdLabel.Text = thirdState;
+            fourthLabel.Text = fourthState;
+            fifthLabel.Text = fifthState;
+            sixthLabel.Text = sithxState;
+            seventhLabel.Text = seventhState;
+            eightLabel.Text = eightState;
+            ninethLabel.Text = ninethState;
             CompanyDB.Connect();
         }
 

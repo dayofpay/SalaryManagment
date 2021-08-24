@@ -16,5 +16,6 @@ namespace SalaryManagment
         public static string form ="";
         public static string capital ="";
         public static string register = "";
+        public static string owners = "";
     }
 }

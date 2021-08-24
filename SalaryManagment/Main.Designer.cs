@@ -40,40 +40,40 @@
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.salaryAmmount = new System.Windows.Forms.Label();
             this.avgIncome = new System.Windows.Forms.Label();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.totaEmployees = new System.Windows.Forms.Label();
             this.totalEmployeesLBL = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.companyStats = new System.Windows.Forms.Label();
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.totaCustomers = new System.Windows.Forms.Label();
             this.ttlCustomerslbl = new System.Windows.Forms.Label();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.totalOrders = new System.Windows.Forms.Label();
             this.totalOrdersLBL = new System.Windows.Forms.Label();
             this.salaryComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.totalOrdersCOMBOBOX = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.guna2GradientPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.guna2GradientPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -250,6 +250,16 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(272, 110);
             this.guna2GradientPanel1.TabIndex = 0;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(0, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(74, 55);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
+            // 
             // salaryAmmount
             // 
             this.salaryAmmount.AutoSize = true;
@@ -295,6 +305,16 @@
             this.guna2GradientPanel3.ShadowDecoration.Parent = this.guna2GradientPanel3;
             this.guna2GradientPanel3.Size = new System.Drawing.Size(293, 104);
             this.guna2GradientPanel3.TabIndex = 3;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(74, 55);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 16;
+            this.pictureBox5.TabStop = false;
             // 
             // guna2GradientPanel2
             // 
@@ -347,15 +367,15 @@
             this.totalEmployeesLBL.TabIndex = 2;
             this.totalEmployeesLBL.Text = "Общо служителя";
             // 
-            // label2
+            // companyStats
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Sans Unicode", 13.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(206, 474);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(291, 23);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Отчет за фирма : (СКРИТО)";
+            this.companyStats.AutoSize = true;
+            this.companyStats.Font = new System.Drawing.Font("Lucida Sans Unicode", 13.75F, System.Drawing.FontStyle.Bold);
+            this.companyStats.Location = new System.Drawing.Point(206, 474);
+            this.companyStats.Name = "companyStats";
+            this.companyStats.Size = new System.Drawing.Size(291, 23);
+            this.companyStats.TabIndex = 4;
+            this.companyStats.Text = "Отчет за фирма : (СКРИТО)";
             // 
             // guna2GradientPanel4
             // 
@@ -368,6 +388,16 @@
             this.guna2GradientPanel4.ShadowDecoration.Parent = this.guna2GradientPanel4;
             this.guna2GradientPanel4.Size = new System.Drawing.Size(282, 107);
             this.guna2GradientPanel4.TabIndex = 5;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(0, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(74, 55);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 14;
+            this.pictureBox4.TabStop = false;
             // 
             // totaCustomers
             // 
@@ -413,6 +443,16 @@
             this.guna2GradientPanel5.ShadowDecoration.Parent = this.guna2GradientPanel5;
             this.guna2GradientPanel5.Size = new System.Drawing.Size(272, 104);
             this.guna2GradientPanel5.TabIndex = 7;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(74, 55);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
             // 
             // totalOrders
             // 
@@ -485,46 +525,6 @@
             this.totalOrdersCOMBOBOX.Size = new System.Drawing.Size(140, 36);
             this.totalOrdersCOMBOBOX.TabIndex = 16;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(74, 55);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(0, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(74, 55);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 14;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(74, 55);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 16;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(0, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(74, 55);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 13;
-            this.pictureBox3.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(0, 3);
@@ -538,14 +538,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
+            this.BackColor = System.Drawing.Color.Tomato;
             this.ClientSize = new System.Drawing.Size(1098, 515);
             this.Controls.Add(this.totalOrdersCOMBOBOX);
             this.Controls.Add(this.salaryComboBox);
             this.Controls.Add(this.guna2GradientPanel5);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2GradientPanel4);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.companyStats);
             this.Controls.Add(this.guna2GradientPanel3);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.guna2GradientPanel1);
@@ -557,18 +557,18 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanel2.PerformLayout();
             this.guna2GradientPanel4.ResumeLayout(false);
             this.guna2GradientPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.guna2GradientPanel5.ResumeLayout(false);
             this.guna2GradientPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -597,7 +597,7 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel4;
         private System.Windows.Forms.Label totaCustomers;
         private System.Windows.Forms.Label ttlCustomerslbl;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label companyStats;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
         private System.Windows.Forms.Label totalOrders;
