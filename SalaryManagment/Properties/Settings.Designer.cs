@@ -121,7 +121,7 @@ namespace SalaryManagment.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1.1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1.2")]
         public string currentVersion {
             get {
                 return ((string)(this["currentVersion"]));

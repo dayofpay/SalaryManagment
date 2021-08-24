@@ -27,7 +27,7 @@
       <Value Profile="(Default)">SALARY MANAGMENT</Value>
     </Setting>
     <Setting Name="currentVersion" Type="System.String" Scope="User">
-      <Value Profile="(Default)">1.1</Value>
+      <Value Profile="(Default)">1.2</Value>
     </Setting>
     <Setting Name="rememberCompany" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
