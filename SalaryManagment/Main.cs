@@ -38,27 +38,14 @@ namespace SalaryManagment
 
         private void Main_Load(object sender, EventArgs e)
         {
+            API.GetAVGMonthly();
+            salaryAmmount.Text = API.avgMonthly.ToString();
             companyStats.Text = "Отчет за фирма" + CompanyDetails.companyName + ": ";
             CompanyDB.Connect();
         }
         private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (salaryComboBox.Text == "1 Месец")
-            {
-                using (MySqlCommand cmd3 = new MySqlCommand
-("SELECT " + API.monthNow + " FROM reports_" + DateTime.Now.Year.ToString(), connection))
-                {
-                    using (MySqlDataReader reader3 = cmd3.ExecuteReader())
-                    {
-                        while (reader3.Read())
-                        {
-                            salaryAmmount.Text = reader3.GetString(0);
-                        }
-                    }
-                }
-            }
-            avgIncome.Text = "Месечен Доход за 1 Месец";
-            }
+        }
 
         private void label4_Click(object sender, EventArgs e)
         {
@@ -68,6 +55,25 @@ namespace SalaryManagment
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void check_Click(object sender, EventArgs e)
+        {
+            var yr = year.Text;
+            var mn = monthCheck.Text;
+            var cmpn = Properties.Settings.Default.companyName;
+            using (MySqlCommand cmd4 = new MySqlCommand
+("SELECT " + "*" + " FROM " + cmpn + "_reports_" + yr + " WHERE " + mn, CompanyDB.connection))
+            {
+                using (MySqlDataReader reader4 = cmd4.ExecuteReader())
+                {
+                    while (reader4.Read())
+                    {
+                        salaryAmmount.Text = reader4.GetString(0);
+                    }
+                    reader4.Close();
+                }
+            }
         }
     }
 }

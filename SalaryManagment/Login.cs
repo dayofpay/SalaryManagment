@@ -53,10 +53,12 @@ namespace SalaryManagment
                 if(rememberCompany.Checked == true)
                 {
                     Properties.Settings.Default.rememberCompany = firmText.Text;
+                    Properties.Settings.Default.Save(); // <Settings.Default.HKEY_<bool:true> //
                 }
                 if (rememberEmployee.Checked == true)
                 {
                     Properties.Settings.Default.rememberEmployeeId = numberTextBox.Text;
+                    Properties.Settings.Default.Save(); // <Settings.Default.empId(string Empstr) //
                 }
             }
             else
@@ -92,6 +94,11 @@ namespace SalaryManagment
 
         private void numberTextBox_TextChanged(object sender, EventArgs e)
         {
+        }
+
+        private void rememberCompany_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs e)
+        {
+
         }
     }
 }

@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
@@ -61,9 +62,12 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.totalOrders = new System.Windows.Forms.Label();
             this.totalOrdersLBL = new System.Windows.Forms.Label();
-            this.salaryComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.year = new Guna.UI2.WinForms.Guna2ComboBox();
             this.totalOrdersCOMBOBOX = new Guna.UI2.WinForms.Guna2ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.monthCheck = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.check = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.guna2Panel1.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -83,7 +87,7 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.SlateGray;
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(122)))), ((int)(((byte)(67)))));
             this.guna2Panel1.Controls.Add(this.guna2Button7);
             this.guna2Panel1.Controls.Add(this.guna2Button6);
             this.guna2Panel1.Controls.Add(this.guna2Button5);
@@ -240,7 +244,7 @@
             // 
             // guna2GradientPanel1
             // 
-            this.guna2GradientPanel1.BackColor = System.Drawing.Color.SeaGreen;
+            this.guna2GradientPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(217)))), ((int)(((byte)(28)))));
             this.guna2GradientPanel1.Controls.Add(this.pictureBox3);
             this.guna2GradientPanel1.Controls.Add(this.salaryAmmount);
             this.guna2GradientPanel1.Controls.Add(this.avgIncome);
@@ -276,9 +280,9 @@
             this.avgIncome.Font = new System.Drawing.Font("Lucida Sans Unicode", 13.75F, System.Drawing.FontStyle.Bold);
             this.avgIncome.Location = new System.Drawing.Point(2, 64);
             this.avgIncome.Name = "avgIncome";
-            this.avgIncome.Size = new System.Drawing.Size(267, 23);
+            this.avgIncome.Size = new System.Drawing.Size(172, 23);
             this.avgIncome.TabIndex = 2;
-            this.avgIncome.Text = "Среден месечен приход";
+            this.avgIncome.Text = "Месечен доход";
             // 
             // guna2ControlBox1
             // 
@@ -295,7 +299,7 @@
             // 
             // guna2GradientPanel3
             // 
-            this.guna2GradientPanel3.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.guna2GradientPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(217)))), ((int)(((byte)(28)))));
             this.guna2GradientPanel3.Controls.Add(this.pictureBox5);
             this.guna2GradientPanel3.Controls.Add(this.guna2GradientPanel2);
             this.guna2GradientPanel3.Controls.Add(this.totaEmployees);
@@ -379,7 +383,7 @@
             // 
             // guna2GradientPanel4
             // 
-            this.guna2GradientPanel4.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.guna2GradientPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(217)))), ((int)(((byte)(28)))));
             this.guna2GradientPanel4.Controls.Add(this.pictureBox4);
             this.guna2GradientPanel4.Controls.Add(this.totaCustomers);
             this.guna2GradientPanel4.Controls.Add(this.ttlCustomerslbl);
@@ -434,7 +438,7 @@
             // 
             // guna2GradientPanel5
             // 
-            this.guna2GradientPanel5.BackColor = System.Drawing.Color.DimGray;
+            this.guna2GradientPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(217)))), ((int)(((byte)(28)))));
             this.guna2GradientPanel5.Controls.Add(this.pictureBox2);
             this.guna2GradientPanel5.Controls.Add(this.totalOrders);
             this.guna2GradientPanel5.Controls.Add(this.totalOrdersLBL);
@@ -474,43 +478,49 @@
             this.totalOrdersLBL.TabIndex = 2;
             this.totalOrdersLBL.Text = "Общо поръчки";
             // 
-            // salaryComboBox
+            // year
             // 
-            this.salaryComboBox.BackColor = System.Drawing.Color.Transparent;
-            this.salaryComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.salaryComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.salaryComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.salaryComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.salaryComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.salaryComboBox.FocusedState.Parent = this.salaryComboBox;
-            this.salaryComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.salaryComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.salaryComboBox.HoverState.Parent = this.salaryComboBox;
-            this.salaryComboBox.ItemHeight = 30;
-            this.salaryComboBox.Items.AddRange(new object[] {
-            "1 Месец",
-            "3 Месеца",
-            "6 Месеца",
-            "12 Месеца"});
-            this.salaryComboBox.ItemsAppearance.Parent = this.salaryComboBox;
-            this.salaryComboBox.Location = new System.Drawing.Point(212, 6);
-            this.salaryComboBox.Name = "salaryComboBox";
-            this.salaryComboBox.ShadowDecoration.Parent = this.salaryComboBox;
-            this.salaryComboBox.Size = new System.Drawing.Size(140, 36);
-            this.salaryComboBox.TabIndex = 8;
-            this.salaryComboBox.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
+            this.year.BackColor = System.Drawing.Color.Transparent;
+            this.year.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.year.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.year.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(122)))), ((int)(((byte)(67)))));
+            this.year.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.year.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.year.FocusedState.Parent = this.year;
+            this.year.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.year.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(89)))), ((int)(((byte)(81)))));
+            this.year.HoverState.Parent = this.year;
+            this.year.ItemHeight = 30;
+            this.year.Items.AddRange(new object[] {
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026",
+            "2027",
+            "2028",
+            "2029",
+            "2030"});
+            this.year.ItemsAppearance.Parent = this.year;
+            this.year.Location = new System.Drawing.Point(212, 6);
+            this.year.Name = "year";
+            this.year.ShadowDecoration.Parent = this.year;
+            this.year.Size = new System.Drawing.Size(140, 36);
+            this.year.TabIndex = 8;
+            this.year.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
             // 
             // totalOrdersCOMBOBOX
             // 
             this.totalOrdersCOMBOBOX.BackColor = System.Drawing.Color.Transparent;
             this.totalOrdersCOMBOBOX.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.totalOrdersCOMBOBOX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.totalOrdersCOMBOBOX.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.totalOrdersCOMBOBOX.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(122)))), ((int)(((byte)(67)))));
             this.totalOrdersCOMBOBOX.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.totalOrdersCOMBOBOX.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.totalOrdersCOMBOBOX.FocusedState.Parent = this.totalOrdersCOMBOBOX;
             this.totalOrdersCOMBOBOX.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.totalOrdersCOMBOBOX.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.totalOrdersCOMBOBOX.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(122)))), ((int)(((byte)(67)))));
             this.totalOrdersCOMBOBOX.HoverState.Parent = this.totalOrdersCOMBOBOX;
             this.totalOrdersCOMBOBOX.ItemHeight = 30;
             this.totalOrdersCOMBOBOX.Items.AddRange(new object[] {
@@ -534,14 +544,155 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // monthCheck
+            // 
+            this.monthCheck.BackColor = System.Drawing.Color.Transparent;
+            this.monthCheck.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.monthCheck.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.monthCheck.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(122)))), ((int)(((byte)(67)))));
+            this.monthCheck.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.monthCheck.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.monthCheck.FocusedState.Parent = this.monthCheck;
+            this.monthCheck.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.monthCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.monthCheck.HoverState.Parent = this.monthCheck;
+            this.monthCheck.ItemHeight = 30;
+            this.monthCheck.Items.AddRange(new object[] {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
+            this.monthCheck.ItemsAppearance.Parent = this.monthCheck;
+            this.monthCheck.Location = new System.Drawing.Point(367, 6);
+            this.monthCheck.Name = "monthCheck";
+            this.monthCheck.ShadowDecoration.Parent = this.monthCheck;
+            this.monthCheck.Size = new System.Drawing.Size(140, 36);
+            this.monthCheck.TabIndex = 17;
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuLabel1.Location = new System.Drawing.Point(358, 14);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(3, 15);
+            this.bunifuLabel1.TabIndex = 18;
+            this.bunifuLabel1.Text = ":";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // check
+            // 
+            this.check.AllowAnimations = true;
+            this.check.AllowMouseEffects = true;
+            this.check.AllowToggling = false;
+            this.check.AnimationSpeed = 200;
+            this.check.AutoGenerateColors = false;
+            this.check.AutoRoundBorders = false;
+            this.check.AutoSizeLeftIcon = true;
+            this.check.AutoSizeRightIcon = true;
+            this.check.BackColor = System.Drawing.Color.Transparent;
+            this.check.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(133)))), ((int)(((byte)(138)))));
+            this.check.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("check.BackgroundImage")));
+            this.check.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.check.ButtonText = "ПРОВЕРИ";
+            this.check.ButtonTextMarginLeft = 0;
+            this.check.ColorContrastOnClick = 45;
+            this.check.ColorContrastOnHover = 45;
+            this.check.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.check.CustomizableEdges = borderEdges2;
+            this.check.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.check.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.check.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.check.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.check.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.check.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.check.ForeColor = System.Drawing.Color.White;
+            this.check.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.check.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.check.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.check.IconMarginLeft = 11;
+            this.check.IconPadding = 10;
+            this.check.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.check.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.check.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.check.IconSize = 25;
+            this.check.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(89)))), ((int)(((byte)(81)))));
+            this.check.IdleBorderRadius = 10;
+            this.check.IdleBorderThickness = 3;
+            this.check.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(133)))), ((int)(((byte)(138)))));
+            this.check.IdleIconLeftImage = null;
+            this.check.IdleIconRightImage = null;
+            this.check.IndicateFocus = false;
+            this.check.Location = new System.Drawing.Point(513, 12);
+            this.check.Name = "check";
+            this.check.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.check.OnDisabledState.BorderRadius = 10;
+            this.check.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.check.OnDisabledState.BorderThickness = 3;
+            this.check.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.check.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.check.OnDisabledState.IconLeftImage = null;
+            this.check.OnDisabledState.IconRightImage = null;
+            this.check.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.check.onHoverState.BorderRadius = 10;
+            this.check.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.check.onHoverState.BorderThickness = 3;
+            this.check.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.check.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.check.onHoverState.IconLeftImage = null;
+            this.check.onHoverState.IconRightImage = null;
+            this.check.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(89)))), ((int)(((byte)(81)))));
+            this.check.OnIdleState.BorderRadius = 10;
+            this.check.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.check.OnIdleState.BorderThickness = 3;
+            this.check.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(133)))), ((int)(((byte)(138)))));
+            this.check.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.check.OnIdleState.IconLeftImage = null;
+            this.check.OnIdleState.IconRightImage = null;
+            this.check.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.check.OnPressedState.BorderRadius = 10;
+            this.check.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.check.OnPressedState.BorderThickness = 3;
+            this.check.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.check.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.check.OnPressedState.IconLeftImage = null;
+            this.check.OnPressedState.IconRightImage = null;
+            this.check.Size = new System.Drawing.Size(67, 26);
+            this.check.TabIndex = 19;
+            this.check.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.check.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.check.TextMarginLeft = 0;
+            this.check.TextPadding = new System.Windows.Forms.Padding(0);
+            this.check.UseDefaultRadiusAndThickness = true;
+            this.check.Click += new System.EventHandler(this.check_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Tomato;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(76)))), ((int)(((byte)(84)))));
             this.ClientSize = new System.Drawing.Size(1098, 515);
+            this.Controls.Add(this.check);
+            this.Controls.Add(this.bunifuLabel1);
+            this.Controls.Add(this.monthCheck);
             this.Controls.Add(this.totalOrdersCOMBOBOX);
-            this.Controls.Add(this.salaryComboBox);
+            this.Controls.Add(this.year);
             this.Controls.Add(this.guna2GradientPanel5);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2GradientPanel4);
@@ -602,7 +753,7 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
         private System.Windows.Forms.Label totalOrders;
         private System.Windows.Forms.Label totalOrdersLBL;
-        private Guna.UI2.WinForms.Guna2ComboBox salaryComboBox;
+        private Guna.UI2.WinForms.Guna2ComboBox year;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -611,6 +762,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2ComboBox totalOrdersCOMBOBOX;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton check;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Guna.UI2.WinForms.Guna2ComboBox monthCheck;
     }
 }
 

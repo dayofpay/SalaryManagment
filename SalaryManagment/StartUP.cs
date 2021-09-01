@@ -42,8 +42,10 @@ namespace SalaryManagment
 
         private void StartUP_Load(object sender, EventArgs e)
         {
+
             versionLabel.Text = "Версия V." + Properties.Settings.Default.currentVersion;
             companyName.Text = Properties.Settings.Default.companyName;
+            API.SetMonth(DateTime.Now.Month);
         }
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)

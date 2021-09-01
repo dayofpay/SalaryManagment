@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState22 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
-            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState23 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
-            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState24 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState4 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState5 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState6 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState19 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
-            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState20 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
-            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState21 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState1 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState2 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState3 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.loginStartLB = new System.Windows.Forms.Label();
@@ -51,15 +52,14 @@
             this.backButton = new Guna.UI2.WinForms.Guna2Button();
             this.firmText = new Guna.UI2.WinForms.Guna2TextBox();
             this.firmLabel = new System.Windows.Forms.Label();
-            this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.rememberCompany = new Bunifu.UI.WinForms.BunifuToggleSwitch();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.rememberEmployee = new Bunifu.UI.WinForms.BunifuToggleSwitch();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
+            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -86,6 +86,22 @@
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(101, 448);
             this.guna2Panel1.TabIndex = 1;
+            // 
+            // bunifuPictureBox1
+            // 
+            this.bunifuPictureBox1.AllowFocused = false;
+            this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPictureBox1.AutoSizeHeight = true;
+            this.bunifuPictureBox1.BorderRadius = 50;
+            this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
+            this.bunifuPictureBox1.IsCircle = true;
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(-2, 0);
+            this.bunifuPictureBox1.Name = "bunifuPictureBox1";
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuPictureBox1.TabIndex = 15;
+            this.bunifuPictureBox1.TabStop = false;
+            this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
             // guna2Panel2
             // 
@@ -294,22 +310,6 @@
             this.firmLabel.TabIndex = 13;
             this.firmLabel.Text = "Име на фирмата: ";
             // 
-            // bunifuPictureBox1
-            // 
-            this.bunifuPictureBox1.AllowFocused = false;
-            this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuPictureBox1.AutoSizeHeight = true;
-            this.bunifuPictureBox1.BorderRadius = 50;
-            this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
-            this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(-2, 0);
-            this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuPictureBox1.TabIndex = 15;
-            this.bunifuPictureBox1.TabStop = false;
-            this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
-            // 
             // rememberCompany
             // 
             this.rememberCompany.Animation = 5;
@@ -323,34 +323,35 @@
             this.rememberCompany.Size = new System.Drawing.Size(32, 18);
             this.rememberCompany.TabIndex = 15;
             this.rememberCompany.ThumbMargin = 3;
-            toggleState22.BackColor = System.Drawing.Color.DarkGray;
-            toggleState22.BackColorInner = System.Drawing.Color.White;
-            toggleState22.BorderColor = System.Drawing.Color.DarkGray;
-            toggleState22.BorderColorInner = System.Drawing.Color.White;
-            toggleState22.BorderRadius = 17;
-            toggleState22.BorderRadiusInner = 11;
-            toggleState22.BorderThickness = 1;
-            toggleState22.BorderThicknessInner = 1;
-            this.rememberCompany.ToggleStateDisabled = toggleState22;
-            toggleState23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            toggleState23.BackColorInner = System.Drawing.Color.White;
-            toggleState23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            toggleState23.BorderColorInner = System.Drawing.Color.White;
-            toggleState23.BorderRadius = 17;
-            toggleState23.BorderRadiusInner = 11;
-            toggleState23.BorderThickness = 1;
-            toggleState23.BorderThicknessInner = 1;
-            this.rememberCompany.ToggleStateOff = toggleState23;
-            toggleState24.BackColor = System.Drawing.Color.DodgerBlue;
-            toggleState24.BackColorInner = System.Drawing.Color.White;
-            toggleState24.BorderColor = System.Drawing.Color.DodgerBlue;
-            toggleState24.BorderColorInner = System.Drawing.Color.White;
-            toggleState24.BorderRadius = 17;
-            toggleState24.BorderRadiusInner = 11;
-            toggleState24.BorderThickness = 1;
-            toggleState24.BorderThicknessInner = 1;
-            this.rememberCompany.ToggleStateOn = toggleState24;
+            toggleState4.BackColor = System.Drawing.Color.DarkGray;
+            toggleState4.BackColorInner = System.Drawing.Color.White;
+            toggleState4.BorderColor = System.Drawing.Color.DarkGray;
+            toggleState4.BorderColorInner = System.Drawing.Color.White;
+            toggleState4.BorderRadius = 17;
+            toggleState4.BorderRadiusInner = 11;
+            toggleState4.BorderThickness = 1;
+            toggleState4.BorderThicknessInner = 1;
+            this.rememberCompany.ToggleStateDisabled = toggleState4;
+            toggleState5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            toggleState5.BackColorInner = System.Drawing.Color.White;
+            toggleState5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            toggleState5.BorderColorInner = System.Drawing.Color.White;
+            toggleState5.BorderRadius = 17;
+            toggleState5.BorderRadiusInner = 11;
+            toggleState5.BorderThickness = 1;
+            toggleState5.BorderThicknessInner = 1;
+            this.rememberCompany.ToggleStateOff = toggleState5;
+            toggleState6.BackColor = System.Drawing.Color.DodgerBlue;
+            toggleState6.BackColorInner = System.Drawing.Color.White;
+            toggleState6.BorderColor = System.Drawing.Color.DodgerBlue;
+            toggleState6.BorderColorInner = System.Drawing.Color.White;
+            toggleState6.BorderRadius = 17;
+            toggleState6.BorderRadiusInner = 11;
+            toggleState6.BorderThickness = 1;
+            toggleState6.BorderThicknessInner = 1;
+            this.rememberCompany.ToggleStateOn = toggleState6;
             this.rememberCompany.Value = false;
+            this.rememberCompany.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs>(this.rememberCompany_CheckedChanged);
             // 
             // label1
             // 
@@ -387,33 +388,33 @@
             this.rememberEmployee.Size = new System.Drawing.Size(32, 18);
             this.rememberEmployee.TabIndex = 17;
             this.rememberEmployee.ThumbMargin = 3;
-            toggleState19.BackColor = System.Drawing.Color.DarkGray;
-            toggleState19.BackColorInner = System.Drawing.Color.White;
-            toggleState19.BorderColor = System.Drawing.Color.DarkGray;
-            toggleState19.BorderColorInner = System.Drawing.Color.White;
-            toggleState19.BorderRadius = 17;
-            toggleState19.BorderRadiusInner = 11;
-            toggleState19.BorderThickness = 1;
-            toggleState19.BorderThicknessInner = 1;
-            this.rememberEmployee.ToggleStateDisabled = toggleState19;
-            toggleState20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            toggleState20.BackColorInner = System.Drawing.Color.White;
-            toggleState20.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            toggleState20.BorderColorInner = System.Drawing.Color.White;
-            toggleState20.BorderRadius = 17;
-            toggleState20.BorderRadiusInner = 11;
-            toggleState20.BorderThickness = 1;
-            toggleState20.BorderThicknessInner = 1;
-            this.rememberEmployee.ToggleStateOff = toggleState20;
-            toggleState21.BackColor = System.Drawing.Color.DodgerBlue;
-            toggleState21.BackColorInner = System.Drawing.Color.White;
-            toggleState21.BorderColor = System.Drawing.Color.DodgerBlue;
-            toggleState21.BorderColorInner = System.Drawing.Color.White;
-            toggleState21.BorderRadius = 17;
-            toggleState21.BorderRadiusInner = 11;
-            toggleState21.BorderThickness = 1;
-            toggleState21.BorderThicknessInner = 1;
-            this.rememberEmployee.ToggleStateOn = toggleState21;
+            toggleState1.BackColor = System.Drawing.Color.DarkGray;
+            toggleState1.BackColorInner = System.Drawing.Color.White;
+            toggleState1.BorderColor = System.Drawing.Color.DarkGray;
+            toggleState1.BorderColorInner = System.Drawing.Color.White;
+            toggleState1.BorderRadius = 17;
+            toggleState1.BorderRadiusInner = 11;
+            toggleState1.BorderThickness = 1;
+            toggleState1.BorderThicknessInner = 1;
+            this.rememberEmployee.ToggleStateDisabled = toggleState1;
+            toggleState2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            toggleState2.BackColorInner = System.Drawing.Color.White;
+            toggleState2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            toggleState2.BorderColorInner = System.Drawing.Color.White;
+            toggleState2.BorderRadius = 17;
+            toggleState2.BorderRadiusInner = 11;
+            toggleState2.BorderThickness = 1;
+            toggleState2.BorderThicknessInner = 1;
+            this.rememberEmployee.ToggleStateOff = toggleState2;
+            toggleState3.BackColor = System.Drawing.Color.DodgerBlue;
+            toggleState3.BackColorInner = System.Drawing.Color.White;
+            toggleState3.BorderColor = System.Drawing.Color.DodgerBlue;
+            toggleState3.BorderColorInner = System.Drawing.Color.White;
+            toggleState3.BorderRadius = 17;
+            toggleState3.BorderRadiusInner = 11;
+            toggleState3.BorderThickness = 1;
+            toggleState3.BorderThicknessInner = 1;
+            this.rememberEmployee.ToggleStateOn = toggleState3;
             this.rememberEmployee.Value = false;
             // 
             // Login
@@ -445,8 +446,8 @@
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
+            this.guna2Panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

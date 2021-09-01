@@ -80,6 +80,7 @@ namespace SalaryManagment
                     myCMD25.ExecuteScalar();
                     myCMD26.ExecuteScalar();
                     Properties.Settings.Default.companyName = CompanyDetails.companyName;
+                    Properties.Settings.Default.Save();
                 }
                 catch(MySqlException error)
                 {

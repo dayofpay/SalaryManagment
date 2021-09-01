@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using MySql.Data.MySqlClient;
 namespace SalaryManagment
 {
     class API
@@ -54,6 +54,19 @@ namespace SalaryManagment
         public static string employeeNum;
         public static string finalstateCompanyName;
         public static string companyName;
+        public static double avgMonthly;
+        public static void GetAVGMonthly()
+        {
+            MySqlCommand getCommand = new MySqlCommand("SELECT " + API.monthNow + " FROM " + Properties.Settings.Default.companyName + "_reports_" + DateTime.Now.Year.ToString(), CompanyDB.connection);
+            getCommand.ExecuteScalar();
+            using (MySqlDataReader reader = getCommand.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    avgMonthly = reader.GetInt32(0);
+                }
+            }
+        }
         public static void SetMonth(int CurrentMonth)
         {
             if (CurrentMonth == 1)
